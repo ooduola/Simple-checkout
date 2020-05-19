@@ -36,4 +36,61 @@ You will discuss your approach with a coach, describing your TDD process, and wi
 ---
 ## Steps to completing exercise
 
-![Domain Model Diamgram](www.diagram.codes/d/sequence/%22Shopper%22%20as%20user%0A%22Item%22%20as%20item%0A%22Checkout%22%20as%20checkout%0A%0A%0Auser-%3Eitem%3A%20%22picks%20an%20item%22%0Aitem--%3Euser%3A%20%22price%20(%C2%A3xx.xx)%22%0Auser-%3Echeckout%3A%20%22go%20to%20checkout%22%0Aitem-%3Echeckout%3A%20%22scan%20item%22%0Acheckout--%3Euser%3A%20%22total%20price%20(%C2%A3xx.xx)%22%0A)
+### Domain Model Diamgram
+
+![Domain Model Diamgram](https://www.diagram.codes/d/sequence/%22Shopper%22%20as%20user%0A%22Item%22%20as%20item%0A%22Checkout%22%20as%20checkout%0A%0A%0Auser-%3Eitem%3A%20%22picks%20an%20item%22%0Aitem--%3Euser%3A%20%22price%20(%C2%A3xx.xx)%22%0Auser-%3Echeckout%3A%20%22go%20to%20checkout%22%0Aitem-%3Echeckout%3A%20%22scan%20item%22%0Acheckout--%3Euser%3A%20%22total%20price%20(%C2%A3xx.xx)%22%0A)
+
+## User story 1
+
+```
+As a shopper
+So I know how much an item costs
+I would like to be able to see its price
+```
+> We have an Item object which responds to price
+
+- [x] Feature test: Created new item. 
+   - *uninitialized constant Item*
+- [x] Write test: Created item_spec.rb in the spec dir. Described Item. 
+   - *Test failed. Uninitialized constant Item*
+- [x] Write code: Created item.rb in the lib dir. Defined Item. Require file in item_spec.rb.
+   - *Test passed*
+- [x] Feature test: Created new item. 
+   - **Successfully created**
+
+---
+
+## User story 2
+
+```
+As a shopper
+So that I can buy an item
+I would like to be able to scan items at the checkout
+```
+> Shopper can use Checkout object.
+
+- [x] Feature test: 
+   - **
+- [x] Write test: 
+   - **
+- [x] Write code: 
+   - **
+- [x] Feature test: 
+   - ****
+
+---
+
+## User story 2
+
+```
+```
+> 
+
+- [x] Feature test: 
+   - **
+- [x] Write test: 
+   - **
+- [x] Write code: 
+   - **
+- [x] Feature test: 
+   - ****
