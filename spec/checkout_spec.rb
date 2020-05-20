@@ -1,16 +1,9 @@
 require 'checkout'
 
 describe Checkout do
+  
+    it { is_expected.to respond_to(:scan).with(1).argument }
 
-  context '#scan' do
-    it ' responds to scan method with 1 argument' do
-      expect(subject).to respond_to(:scan).with(1).argument
-    end
-  end
+    it { is_expected.to respond_to(:total_price) }
 
-  context '#total_price' do
-    it ' responds to total_price' do
-      expect(subject).to respond_to(:total_price)
-    end
-  end
 end
