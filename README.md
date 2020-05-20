@@ -47,16 +47,33 @@ As a shopper
 So I know how much an item costs
 I would like to be able to see its price
 ```
-> We have an Item object which responds to price
+> 1. Shopprt can pick a Item object.
 
 - [x] Feature test: Created new item. 
-   - *uninitialized constant Item*
+   - *Failed. Uninitialized constant Item*
 - [x] Write test: Created item_spec.rb in the spec dir. Described Item. 
    - *Test failed. Uninitialized constant Item*
 - [x] Write code: Created item.rb in the lib dir. Defined Item. Require file in item_spec.rb.
    - *Test passed*
-- [x] Feature test: Created new item. 
-   - **Successfully created**
+   
+> Shopper can see an Item's object price. 
+
+- [x] Feature test: Invoked price on item object.
+   - *Failed. undefined method `price'*
+- [x] Write test: Item object to respond to price. 
+   - *Test failed.*
+- [x] Write code: Defined the price method. 
+   - *Test passed*
+- [x] Feature test: Invoked price on item object. 
+   -  *Failed. Returned nil*
+- [x] Write test: Item to return a given integer when called. 
+   - **test failed. expected 30 got nil**
+- [x] Write code: Define price to equal to 30. 
+   - **test passed**
+- [x] Refactor: Define price to equal to item_price given as an argument when being initialized.
+- [x] Write test: To accept 1 argument when a Item being initalized and define argument in test using let. 
+
+
 
 ---
 
@@ -67,7 +84,37 @@ As a shopper
 So that I can buy an item
 I would like to be able to scan items at the checkout
 ```
-> Shopper can use Checkout object.
+> 1. Shopper can use Checkout object.
+
+- [x] Feature test: Create new checkout object.
+   - *Failed. Uninitialized constant Checkout*
+- [x] Write test: Created checkout_spec.rb file. Describe Checkout.
+   - *Failed. Uninitialized constant Checkout*
+- [x] Write code: Created checkout.rb file. Defined Checkout class.
+   - **
+- [x] Feature test: **checkout object successfully created**
+
+> 2. Shopper can use scan on checkout with an agrument.
+
+- [x] Feature test: Invoke scan method with item object as argument on checkout. 
+   - *Failed. undefined local variable or method `item' *
+- [x] Write test: Wrote test for scan method with 1 argument.
+   - *Failed. expected #<Checkout:0x00007fc1af2c08d0> to respond to :scan with 1 argument*
+- [x] Write code: Defined scan method with argument item. 
+   - *Test passed*
+- [x] Feature test: **Feature passed. Invoked scan with item object as argument on checkout.**
+
+
+---
+
+## User story 3
+
+```
+As a shopper
+So that I know how much to pay
+I would like to be able to see a total for all scanned items
+```
+> 
 
 - [x] Feature test: 
    - **
@@ -77,7 +124,7 @@ I would like to be able to scan items at the checkout
    - **
 - [x] Feature test: 
    - ****
-
+ 
 ---
 
 ## User story 2
