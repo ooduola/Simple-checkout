@@ -38,7 +38,9 @@ You will discuss your approach with a coach, describing your TDD process, and wi
 
 ### Domain Model Diamgram
 
-![Domain Model Diamgram](https://www.diagram.codes/d/sequence/%22Shopper%22%20as%20user%0A%22Item%22%20as%20item%0A%22Checkout%22%20as%20checkout%0A%0A%0Auser-%3Eitem%3A%20%22picks%20an%20item%22%0Aitem--%3Euser%3A%20%22price%20(%C2%A3xx.xx)%22%0Auser-%3Echeckout%3A%20%22go%20to%20checkout%22%0Aitem-%3Echeckout%3A%20%22scan%20item%22%0Acheckout--%3Euser%3A%20%22total%20price%20(%C2%A3xx.xx)%22%0A)
+![domain_model_diagram](https://github.com/ooduola/Simple-checkout/blob/master/images/domain_model_diagram.png)
+
+---
 
 ## User story 1
 
@@ -47,7 +49,7 @@ As a shopper
 So I know how much an item costs
 I would like to be able to see its price
 ```
-> 1. Shopprt can pick a Item object.
+> 1. Shopper can pick a Item object.
 
 - [x] Feature test: Created new item. 
    - *Failed. Uninitialized constant Item*
@@ -67,16 +69,13 @@ I would like to be able to see its price
 - [x] Feature test: Invoked price on item object. 
    -  *Failed. Returned nil*
 - [x] Write test: Item to return a given integer when called. 
-   - **test failed. expected 30 got nil**
+   - *test failed. expected 30 got nil*
 - [x] Write code: Define price to equal to 30. 
-   - **test passed**
+   - *test passed*
 - [x] Refactor: Define price to equal to item_price given as an argument when being initialized.
-- [x] Write test: To accept 1 argument when a Item being initalized and define argument in test using let. 
-
-
-
+- [x] Write test: Item to accept item_price argument when being initalized.
+- [x] Feature test: **Successful. Item price returned**
 ---
-
 ## User story 2
 
 ```
@@ -103,10 +102,7 @@ I would like to be able to scan items at the checkout
 - [x] Write code: Defined scan method with argument item. 
    - *Test passed*
 - [x] Feature test: **Feature passed. Invoked scan with item object as argument on checkout.**
-
-
 ---
-
 ## User story 3
 
 ```
@@ -114,30 +110,17 @@ As a shopper
 So that I know how much to pay
 I would like to be able to see a total for all scanned items
 ```
-> 
+> Checkout to return total price of items scanned. 
 
-- [x] Feature test: 
-   - **
-- [x] Write test: 
-   - **
-- [x] Write code: 
-   - **
-- [x] Feature test: 
-   - ****
- 
+- [x] Feature test: Scanned 2 item objects. Asked checkout for total_price.
+   - *undefined method `total_price'*
+- [x] Write test: Checkout to respond to total_price. 
+   - *Test failed*
+- [x] Write code: Defined total_price method. 
+   - *Test passed*
+- [x] Refactored: checkout_spec file.
+- [x] Feature test: Scan item to increase total_price by items price. 
+   - *returns nil*
+- [x] Write test:
+
 ---
-
-## User story 2
-
-```
-```
-> 
-
-- [x] Feature test: 
-   - **
-- [x] Write test: 
-   - **
-- [x] Write code: 
-   - **
-- [x] Feature test: 
-   - ****
